@@ -82,7 +82,7 @@
                       </span>
                                       <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://drive.google.com/file/d/1quISaBypGRFM7YAvR-1k5Y_U0Nyopic8/view?usp=sharing" target="_blank"
+                    <a href="" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -93,7 +93,7 @@
 
                 <div class="dropdown is-hoverable" style="margin-top: 0.15cm;">
                   <div class="dropdown-trigger">
-                    <button class="button is-normal is-rounded is-dark" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <button class="button is-normal is-rounded is-dark" aria-haspopup="true" aria-controls="dropdown-menu" target="_blank">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
@@ -136,32 +136,6 @@
     </div>
   </div>
 </section>
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-
-      <!-- 第一张图片 -->
-      <div class="item" style="margin-bottom: 2rem;">
-        <img src="static/images/attack_framework.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Overview of our two-stage attack framework     </h2>
-      </div>
-
-      <!-- 第二张图片 -->
-      <div class="item">
-        <img src="static/images/real_world_show.jpg" alt="MY ALT TEXT"  style="margin-left: 70px;"/>
-        <h2 class="subtitle has-text-centered">
-          Two real-world scenarios. The first row (a to d) shows the results of Road Straightening Attacks (RSA). The second row
-(e to h) illustrates Early Turn Attacks (ETA).      </h2>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -172,6 +146,75 @@
           <p>
             High-definition (HD) maps provide precise environmental information essential for prediction and planning in autonomous driving (AD) systems. Due to the high cost of labeling and maintenance, recent research has turned to online HD map construction using onboard sensor data, offering wider coverage and more timely updates for autonomous vehicles (AVs). However, the robustness of online map construction under adversarial conditions remains underexplored. In this paper, we present a systematic vulnerability analysis of online map construction models, which reveal that these models exhibit an inherent bias toward predicting symmetric road structures. In asymmetric scenes like forks or merges, this bias often causes the model to mistakenly predict a straight boundary that mirrors the opposite side. We demonstrate that this vulnerability persists in real-world and can be reliably triggered by obstruction or targeted interference. Leveraging this vulnerability, we propose a novel two-stage attack framework capable of manipulating online constructed maps. First, our method identifies vulnerable asymmetric scenes along the victim AV’s potential route. Then, we optimize the location and pattern of camera-blinding attacks and adversarial patch attacks. Evaluations on a public autonomous driving dataset demonstrate that our attacks can degrade mapping accuracy by up to 10\% in average precision (AP), render up to 44\% of targeted routes unreachable, and increase collision rates with real-world road boundaries by up to 26\%. These attacks are also validated on a real-world testbed vehicle. We further analyze root causes of the symmetry bias,  attributing them to training data imbalance, model architecture, and map element representation. Based on these findings, we propose targeted defenses, including active fine-tuning and adversarial training, which significantly improve model robustness. To the best of our knowledge, this study represents the first vulnerability assessment of online map construction models and introduces the first digital and realistic attack against them.
           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <!-- 第一张图片 -->
+      <div class="item" style="margin-bottom: 2rem;">
+        <img src="static/images/attack_framework.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Finger1: Overview of our two-stage attack framework     </h2>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="hero-body ">
+    <div class="container ">
+
+      <!-- 第二张图片 -->
+      <div class="item" style="margin-bottom: 40px;" >
+        <img src="static/images/real_world_show_01.png" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          Finger2: Real-world Road Straightening Attack using flashlight. The front and front-right camera views are overexposed by direct lighting (a), causing the perception system to misinterpret the right-turn lane as a straight continuation (c). </h2>
+      </div>
+      <div class="item" style="margin-bottom: 40px;" >
+        <img src="static/images/real_world_show_02.png" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          Finger3: Road Straightening Attack using printed adversarial patch. The front camera view is partially occluded (a), leading to consistent failure in detecting the right-turn lane (c). </h2>
+      </div>
+      <div class="item" style="margin-bottom: 40px;" >
+        <img src="static/images/real_world_show_03.png" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          Finger4: Early Turn Attack via flashlight-based camera blinding.  The attack distorts visual input in front-facing views (a),  causing the system to deviate prematurely at the intersection (c). </h2>
+      </div>
+      <div class="item" style="margin-bottom: 40px;" >
+        <img src="static/images/real_world_show_04.png" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          Finger5: Early Turn Attack using adversarial patch. Occlusion in the front-right view (a) misleads the model into turning early (c), while the clean output (b) reflects the correct trajectory. </h2>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop width="100%" height="auto" >
+            <!-- Your video file here -->
+            <source src="static/videos/combined_video_01.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop width="100%" height="auto">
+            <!-- Your video file here -->
+            <source src="static/videos/combined_video_02.mp4"
+            type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
