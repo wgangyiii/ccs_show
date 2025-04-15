@@ -52,8 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Vulnerability Assessment and Attack on Online Map Construction
-              for Autonomous Driving</h1>
+            <h1 class="title is-1 publication-title">Asymmetry Vulnerability and Physical Attacks on Online Map Construction for Autonomous Driving</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">Anonymous authors</span>
@@ -80,54 +79,40 @@
                           <span>Paper</span>
                         </a>
                       </span>
-                                      <!-- Github link -->
-                  <span class="link-block">
-                    <a href="" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+                      <!-- Github link -->
+                      <span class="link-block">
+                        <a href="javascript:void(0);" class="external-link button is-normal is-rounded is-dark is-disabled" style="pointer-events: none; opacity: 0.5;">
+                          <span class="icon">
+                            <i class="fab fa-github"></i>
+                          </span>
+                          <span>Code</span>
+                        </a>
+                      </span>
 
-                <div class="dropdown is-hoverable" style="margin-top: 0.15cm;">
-                  <div class="dropdown-trigger">
-                    <button class="button is-normal is-rounded is-dark" aria-haspopup="true" aria-controls="dropdown-menu" target="_blank">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
+                      <div class="dropdown is-hoverable" style="margin-top: 0.15cm; pointer-events: none; opacity: 0.5;">
+                        <div class="dropdown-trigger">
+                          <button class="button is-normal is-rounded is-dark" aria-haspopup="true" aria-controls="dropdown-menu" disabled>
+                            <span class="icon">
+                              <i class="fas fa-file-pdf"></i>
+                            </span>
+                            <span>Datasets</span>
+                            <span class="icon is-small">
+                              <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <span class="link-block">
+                        <a href="javascript:void(0);" class="external-link button is-normal is-rounded is-dark is-disabled" style="pointer-events: none; opacity: 0.5;">
+                          <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                          </span>
+                          <span>Arxiv</span>
+                        </a>
                       </span>
-                      <span>Datasets</span>
-                      <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                      </span>
-                    </button>
-                  </div>
-                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                      <a href="https://www.nuscenes.org/nuscenes" target="_blank" class="dropdown-item">
-                        Nuscenes Datasets
-                      </a>
-                      <a href="" target="_blank" class="dropdown-item">
-                        Attack Datasets
-                      </a>
-                      <a href="" target="_blank" class="dropdown-item">
-                        Real-World Datasets
-                      </a>
-                    </div>
-                  </div>
-                </div>
 
                 <!-- ArXiv abstract Link -->
                 <!-- <span class="link-block"> -->
-                  <a class="external-link button is-normal is-rounded is-light is-static" style="pointer-events: none; opacity: 0.5;">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Arxiv</span>
-                  </a>
-                </span>
-                </a>
               </span>
             </div>
           </div>
@@ -144,8 +129,32 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            High-definition (HD) maps provide precise environmental information essential for prediction and planning in autonomous driving (AD) systems. Due to the high cost of labeling and maintenance, recent research has turned to online HD map construction using onboard sensor data, offering wider coverage and more timely updates for autonomous vehicles (AVs). However, the robustness of online map construction under adversarial conditions remains underexplored. In this paper, we present a systematic vulnerability analysis of online map construction models, which reveal that these models exhibit an inherent bias toward predicting symmetric road structures. In asymmetric scenes like forks or merges, this bias often causes the model to mistakenly predict a straight boundary that mirrors the opposite side. We demonstrate that this vulnerability persists in real-world and can be reliably triggered by obstruction or targeted interference. Leveraging this vulnerability, we propose a novel two-stage attack framework capable of manipulating online constructed maps. First, our method identifies vulnerable asymmetric scenes along the victim AV’s potential route. Then, we optimize the location and pattern of camera-blinding attacks and adversarial patch attacks. Evaluations on a public autonomous driving dataset demonstrate that our attacks can degrade mapping accuracy by up to 10\% in average precision (AP), render up to 44\% of targeted routes unreachable, and increase collision rates with real-world road boundaries by up to 26\%. These attacks are also validated on a real-world testbed vehicle. We further analyze root causes of the symmetry bias,  attributing them to training data imbalance, model architecture, and map element representation. Based on these findings, we propose targeted defenses, including active fine-tuning and adversarial training, which significantly improve model robustness. To the best of our knowledge, this study represents the first vulnerability assessment of online map construction models and introduces the first digital and realistic attack against them.
-          </p>
+            High-definition (HD) maps provide precise environmental information essential for prediction and planning in autonomous driving
+(AD) systems. Due to the high cost of labeling and maintenance,
+recent research has turned to online HD map construction using
+onboard sensor data, offering wider coverage and more timely updates for autonomous vehicles (AVs). However, the robustness of
+online map construction under adversarial conditions remains underexplored. In this paper, we present a systematic vulnerability
+analysis of online map construction models, which reveals that
+these models exhibit an inherent bias toward predicting symmetric
+road structures. In asymmetric scenes like forks or merges, this bias
+often causes the model to mistakenly predict a straight boundary
+that mirrors the opposite side. We demonstrate that this vulnerability persists in the real-world and can be reliably triggered by
+obstruction or targeted interference. Leveraging this vulnerability,
+we propose a novel two-stage attack framework capable of manipulating online constructed maps. First, our method identifies
+vulnerable asymmetric scenes along the victim AV’s potential route.
+Then, we optimize the location and pattern of camera-blinding
+attacks and adversarial patch attacks. Evaluations on a public AD
+dataset demonstrate that our attacks can degrade mapping accuracy
+by up to 11.2% in average precision, render up to 44% of targeted
+routes unreachable, and increase collision rates with real-world
+road boundaries by up to 26%. These attacks are also validated on a
+real-world testbed vehicle.1 We further analyze root causes of the
+symmetry bias, attributing them to training data imbalance, model
+architecture, and map element representation. Based on these findings, we propose asymmetric data fine-tuning as a targeted defense,
+which significantly improves model robustness. To the best of our
+knowledge, this study presents the first vulnerability assessment
+of online map construction models and introduces the first digital
+and physical attack against them.</p>
         </div>
       </div>
     </div>
